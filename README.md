@@ -50,6 +50,8 @@ http://localhost:8000/
 
 You should see the Swagger UI:
 
+## **Screenshots**
+
 
 ## **Requirements**
 ```
