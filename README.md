@@ -5,6 +5,10 @@ Frontend: React + Vite + TypeScript
 Backend: Express + TypeScript
 CMS: Payload CMS
 ```
+Live Site: https://voice.genovation.ai
+example credentials: 
+email: genovationai@gmail.com
+password: Genovation097@
 
 ## Quick Start
 
