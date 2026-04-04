@@ -10,7 +10,7 @@ CMS: Payload CMS
 
 ### 1. Clone the Repository
 ```powershell
-git clone https://github.com/Genovation-AI-Burlington/GenovationVoiceDashboard.git
+git clone https://github.com/Rawhialfar/GenovationVoiceDashboard.git
 cd GenovationVoiceDashboard
 ```
 
@@ -49,6 +49,8 @@ http://localhost:8000/
 ```
 
 You should see the Swagger UI:
+
+## **Screenshots**
 
 
 ## **Requirements**
