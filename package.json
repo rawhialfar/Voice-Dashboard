@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "netlify-cli": "^24.8.0",
+    "serverless-http": "^4.0.0",
+    "stripe": "^19.1.0"
+  }
+}

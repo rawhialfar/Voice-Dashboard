@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+/* Add to your global CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-dark: #000000;
+  --color-dark-off: #0a0a0a;
+  --color-light: #ffffff;
+  --color-light-off: #f8f8f8;
+
+  --color-gray: #888888;
+  --color-gray-dark: #B8B8B8;
+
+  --color-primary: #3160df;
+  --color-primary-highlight: #6b8ff1;
+  --color-secondary: #d6e22d;
+  --color-secondary-highlight: #e7ec97;
+
+  --text-xxl: clamp(2.5rem, 5vw + 1rem, 3.25rem);
+  --text-xl: clamp(2rem, 4.5vw + 1rem, 2.75rem);
+  --text-l: clamp(1.5rem, 3.5vw + 1rem, 2.25rem);
+  --text-m: clamp(1.125rem, 2.5vw + 0.75rem, 1.5rem);
+  --text-s: clamp(1rem, 1.8vw + 0.5rem, 1.25rem);
+  --text-xs: clamp(0.875rem, 1vw + 0.25rem, 1rem);
+  --text-xxs: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-text: var(--color-light);
+    --color-background: var(--color-dark);
+    --color-gray: var(--color-dark-off);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  @theme {
+    --color-text: var(--color-dark);
+    --color-background: var(--color-light);
+    --color-gray: var(--color-light-off);
+  }
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+* {
+  font-weight: 400;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+
+}
+/* Optional: smooth transitions for dark mode */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+nav {
+  font-size: clamp(12px, 1.2vw + 1rem, 16px);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+nav:hover {
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 900;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+  transition: 0.3s ease;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--text-l);
+  line-height: 1.1;
+}
+
+button {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  transition: 0.3s ease-in-out;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.button-secondary {
+  color:  var(--color-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  transition: 0.3s ease-in-out;
+}
+.button-secondary:hover {
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  transition: 0.3s ease-in-out;
+}
+
+/* Utility to gently dim background on hover for interactive elements.
+   Apply the `hover-dim` class to buttons or other interactive components
+   to lower background brightness on hover without changing markup colors. */
+.hover-dim,
+.interactive {
+  transition: filter 0.18s ease, transform 0.12s ease, background-color 0.18s ease;
+}
+.hover-dim:hover,
+.interactive:hover {
+  filter: brightness(0.92);
+}
+
+/* Also apply a subtle dim to native buttons by default */
+button:hover:not(:disabled) {
+  filter: brightness(0.96);
+}
+button:active:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+
+  box-shadow: 0 0 0px 1000px var(--color-gray) inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-gray) inset !important;
+
+  caret-color: var(--color-primary) !important;
+  -webkit-text-fill-color: var(--color-primary) !important;
+}
+
+input:-webkit-autofill::first-line {
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.stripe-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+}
+
+.stripe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.pay-button {
+  background: #5469d4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pay-button:hover:not(:disabled) {
+  background: #4557b3;
+}
+
+.pay-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 8px;
+  background: #fdf0ed;
+  border-radius: 4px;
+  border: 1px solid #fadbd8;
+}
+
+.success {
+  color: #27ae60;
+  padding: 8px;
+  background: #eafaf1;
+  border-radius: 4px;
+  border: 1px solid #d5f5e3;
+}
+
+.test-cards {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+.test-cards h4 {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.test-cards ul {
+  list-style: none;
+  padding: 0;
+}
+
+.test-cards li {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+.test-cards code {
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+/* Add to your global CSS */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
