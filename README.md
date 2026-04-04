@@ -51,7 +51,8 @@ http://localhost:8000/
 You should see the Swagger UI:
 
 ## **Screenshots**
-!(https://github.com/rawhialfar/Voice-Dashboard/blob/d2e6585ad0ce06f7ce33d2cd24af384188004ce5/Screenshots/image1.png)
+![ss1](https://github.com/rawhialfar/Voice-Dashboard/blob/d2e6585ad0ce06f7ce33d2cd24af384188004ce5/Screenshots/image1.png)
+!()
 
 [https://github.com/rawhialfar/Voice-Dashboard/blob/d2e6585ad0ce06f7ce33d2cd24af384188004ce5/Screenshots/image1.5.png]
 [https://github.com/rawhialfar/Voice-Dashboard/blob/d2e6585ad0ce06f7ce33d2cd24af384188004ce5/Screenshots/image2.png]
